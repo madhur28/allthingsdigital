@@ -2,10 +2,12 @@
 <html lang="en">
     <head>
         <script>
-        window.dataLayer = window.dataLayer || [];
-                window.dataLayer.push({
+        digitaldata.dataLayer = digitaldata.dataLayer || [];
+                digitaldata.dataLayer.push({
                 'pageType': location.href,
-                'pagePath': location.pathname
+                'pagePath': location.pathname,
+                 'pagename': document.title,
+                 'pageURL': document.URL  
                  });
         </script>
         <meta charset="utf-8" />
@@ -24,7 +26,7 @@
         <link href="css/styles.css" rel="stylesheet" />
         
         <!-- Adobe Launch -->
-        <script src="https://assets.adobedtm.com/49a88cbe2c56/90505bdfdc54/launch-fafa49f63449-staging.min.js" async></script>
+        <script src="https://assets.adobedtm.com/058c753ec3a9/0c1a6168bc4e/launch-e9c61078af2a-development.min.js" async></script>
                
         <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
