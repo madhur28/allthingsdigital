@@ -2,13 +2,22 @@
 <html lang="en">
     <head>
         <script>
-        digitaldata.dataLayer = digitaldata.dataLayer || [];
-                digitaldata.dataLayer.push({
-                'pageType': location.href,
-                'pagePath': location.pathname,
-                 'pagename': document.title,
-                 'pageURL': document.URL  
-                 });
+       window.adobeDataLayer = window. adobeDataLayer || []; 
+  //Setting only Page Level and user specific variables 
+window.adobeDataLayer.push({ 
+            "event":"page_loaded", 
+           "web":{ 
+               "webPageDetails":{ 
+pageView:{“value”:1},  
+                  "name": document.title, 
+                  "siteSection": "<site-section-name>", 
+                  “URL”: document.URL,         
+                  "server": document.domain, 
+                  "errorPage": "<Error Name>", //Populate only when an error occurs 
+                  "siteSectionLevel2": "<site-section-level2-name>", 
+      “authorName”: “<author name>”, // Only on education pages, populate author name when available 
+      }}});	           
+                });
         </script>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -28,13 +37,13 @@
         <!-- Adobe Launch -->
         <script src="https://assets.adobedtm.com/058c753ec3a9/0c1a6168bc4e/launch-e9c61078af2a-development.min.js" async></script>
                
-        <!-- Google Tag Manager -->
+      /*  <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-5RSPKKQ');</script>
-<!-- End Google Tag Manager -->
+<!-- End Google Tag Manager --> */
         
     </head>
     <body id="page-top">
